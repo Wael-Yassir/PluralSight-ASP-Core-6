@@ -1,16 +1,15 @@
-using BigPicture.Data.Models;
 using BigPicture.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BigPicture.Pages
+namespace BigPicture.Views.Product
 {
     public class CreateModel : PageModel
     {
         private readonly IProductRepository _productRepository;
 
         [BindProperty]
-        public Product NewProduct { get; set; } = new();
+        public Data.Models.Product NewProduct { get; set; } = new();
 
         public CreateModel(IProductRepository productRepository)
         {

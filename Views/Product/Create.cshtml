@@ -1,5 +1,4 @@
-﻿@page
-@model CreateModel
+﻿@model BigPicture.Data.Models.Product
 
 <h4>Add a product</h4>
 
@@ -8,18 +7,18 @@
 
     <div class="row mb-2 form-group">
         <div class="col-3">
-            <label asp-for="NewProduct.Name"></label>
+            <label asp-for="Name"></label>
         </div>
         <div class="col-9">
-            <input class="form-control" type="text" asp-for="NewProduct.Name" />
+            <input class="form-control" type="text" asp-for="Name" />
         </div>
     </div>
     <div class="row">
         <div class="col-3">
-            <label asp-for="NewProduct.Price"></label>
+            <label asp-for="Price"></label>
         </div>
         <div class="col-9">
-            <input class="form-control" type="text" asp-for="NewProduct.Price" />
+            <input class="form-control" type="text" asp-for="Price" />
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Add</button>

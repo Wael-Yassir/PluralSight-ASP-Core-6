@@ -4,7 +4,7 @@ using BigPicture.Data.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
@@ -24,6 +24,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Product}/{action=Index}");
 
 app.Run();

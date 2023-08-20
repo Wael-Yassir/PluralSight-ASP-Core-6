@@ -4,14 +4,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using BigPicture.Data.Models;
 using BigPicture.Data.Repositories;
 
-namespace BigPicture.Pages
+namespace BigPicture.Views.Product
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly IProductRepository _productRepository;
 
-        public IEnumerable<Product> Products { get; set; } = Enumerable.Empty<Product>();
+        public IEnumerable<Data.Models.Product> Products { get; set; } = Enumerable.Empty<Data.Models.Product>();
 
         public IndexModel(IProductRepository productRepository, ILogger<IndexModel> logger)
         {
